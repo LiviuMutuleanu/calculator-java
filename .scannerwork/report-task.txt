@@ -1,0 +1,6 @@
+projectKey=Lvl3Prj
+serverUrl=http://localhost:9000
+serverVersion=25.3.0.104237
+dashboardUrl=http://localhost:9000/dashboard?id=Lvl3Prj
+ceTaskId=1d6276d9-18cc-4db5-921b-7d8c65b29caf
+ceTaskUrl=http://localhost:9000/api/ce/task?id=1d6276d9-18cc-4db5-921b-7d8c65b29caf

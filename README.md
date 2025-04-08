@@ -32,11 +32,11 @@ Comentarii insuficiente:
                                         Analiza Statica
 Am folosit instrumentul Lint
 
-calculator.java - linia 18,37 - denumirea metodei ToString modificata la myString
-                  linia 24 -    denumirea metodei Run modificata la myRun
-                  linia 53 -    bucla for modificata in for imbunatatit
-                  linia 54 -    instructiunea if modificata in switch
-                  linia 70,75,96,106,119,131,147,157,171,183 denumirea metodei Calculate modificata in myCalculate
-                  linia 71 - variabila textResult nu e necesar sa fie declarata separat
+calculator.java - linia 18, 37 - denumirea metodei ToString modificata la myString*
+                  linia 24 -    denumirea metodei Run modificata la myRun*
+                  linia 53 -    bucla for modificata in for imbunatatit*
+                  linia 54 -    instructiunea if modificata in switch*
+                  linia 70, 75, 96, 106, 119, 131, 147, 157, 171, 183 denumirea metodei Calculate modificata in myCalculate*
+                  linia 71 - variabila textResult nu e necesar sa fie declarata separat*
                   linia 184 - nu e necesar return
                                         

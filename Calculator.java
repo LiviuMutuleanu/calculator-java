@@ -1,5 +1,5 @@
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Calculator {
 
@@ -15,13 +15,13 @@ public class Calculator {
         private Operations() {
         }
 
-        public static String ToString() {
+        public static String myString() {
             return "" + ADDITION_SYMBOL + MULTIPLICATION_SYMBOL + DIVISION_SYMBOL + SUBTRACTION_SYMBOL;
         }
 
     }
 
-    public static String Run(String expression) {
+    public static String myRun(String expression) {
         return evaluateExpression(expression);
     }
 
@@ -34,7 +34,7 @@ public class Calculator {
             expression = 0 + expression;
         }
         // split expression by arithmetic operation to get all digits
-        String[] numbers = expression.split("[" + Operations.ToString() + "]");
+        String[] numbers = expression.split("[" + Operations.myString() + "]");
 
         // parse all operations
         List<String> operationList = new ArrayList<>();
@@ -50,28 +50,26 @@ public class Calculator {
         // parse all string numbers to float ones
         List<Float> numberList = new ArrayList<>();
 
-        for (int i = 0; i < numbers.length; i++) {
-
-            if (numbers[i].equals("-Infinity")) {
-                numberList.add(Float.NEGATIVE_INFINITY);
-            } else if (numbers[i].equals("Infinity")) {
-                numberList.add(Float.POSITIVE_INFINITY);
-            } else {
-
-                try {
-                    numberList.add(Float.parseFloat(numbers[i]));
-                } catch (Exception exc) {
-                    return "ERROR";
+        for (String number : numbers) {
+            switch (number) {
+                case "-Infinity" -> numberList.add(Float.NEGATIVE_INFINITY);
+                case "Infinity" -> numberList.add(Float.POSITIVE_INFINITY);
+                default -> {
+                    try {
+                        numberList.add(Float.valueOf(number));
+                    }catch (NumberFormatException exc) {
+                        return "ERROR";
+                    }
                 }
             }
         }
 
-        Calculate(numberList, operationList);
-        String textResult = Float.toString(finalResult);
-        return textResult;
+        myCalculate(numberList, operationList);
+        
+        return Float.toString(finalResult);
     }
 
-    private static void Calculate(List<Float> numbers, List<String> operations) {
+    private static void myCalculate(List<Float> numbers, List<String> operations) {
 
         if (numbers.size() == 1) {
             finalResult = numbers.get(0);
@@ -92,7 +90,7 @@ public class Calculator {
 
                 operations.remove(indexMultiply);
 
-                Calculate(numbers, operations);
+                myCalculate(numbers, operations);
                 return;
             } else {
                 result += numbers.get(indexDivide) / numbers.get(indexDivide + 1);
@@ -102,7 +100,7 @@ public class Calculator {
 
                 operations.remove(indexDivide);
 
-                Calculate(numbers, operations);
+                myCalculate(numbers, operations);
                 return;
             }
         }
@@ -115,7 +113,7 @@ public class Calculator {
 
             operations.remove(indexMultiply);
 
-            Calculate(numbers, operations);
+            myCalculate(numbers, operations);
             return;
         }
 
@@ -127,7 +125,7 @@ public class Calculator {
 
             operations.remove(indexDivide);
 
-            Calculate(numbers, operations);
+            myCalculate(numbers, operations);
             return;
         }
 
@@ -143,7 +141,7 @@ public class Calculator {
 
                 operations.remove(indexPlus);
 
-                Calculate(numbers, operations);
+                myCalculate(numbers, operations);
                 return;
             } else {
                 result += numbers.get(indexMinus) - numbers.get(indexMinus + 1);
@@ -153,7 +151,7 @@ public class Calculator {
 
                 operations.remove(indexMinus);
 
-                Calculate(numbers, operations);
+                myCalculate(numbers, operations);
                 return;
             }
 
@@ -167,7 +165,7 @@ public class Calculator {
 
             operations.remove(indexPlus);
 
-            Calculate(numbers, operations);
+            myCalculate(numbers, operations);
             return;
         }
 
@@ -179,8 +177,7 @@ public class Calculator {
 
             operations.remove(indexMinus);
 
-            Calculate(numbers, operations);
-            return;
+            myCalculate(numbers, operations);
         }
 
     }

@@ -3,7 +3,7 @@
                  Raport LOC, complexitate ciclomatica, complexitate cognitiva,
                              revizuire informala si analiza statica
 
- LOC - 145
+ LOC - 148
 
  Complexitate cilomatica metoda evaluateExpression 7
  

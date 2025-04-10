@@ -39,4 +39,6 @@ calculator.java - linia 18, 37 - denumirea metodei ToString modificata la myStri
                   linia 70, 75, 96, 106, 119, 131, 147, 157, 171, 183 denumirea metodei Calculate modificata in myCalculate*
                   linia 71 - variabila textResult nu e necesar sa fie declarata separat*
                   linia 184 - nu e necesar return
+
+start.java - linia 8, 15, 17, 21 denumirea variabilei Expression modificata in myExpression                  
                                         

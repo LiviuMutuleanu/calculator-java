@@ -3,7 +3,30 @@ import java.util.Scanner;
 public class Start {
 
 
+public static void testRun(String expression) {
+        // Define the expression to test
+        float expectedResult = 4;
 
+        // Call the myRun method to get the actual result
+		String result = Calculator.myRun(expression);
+		
+       // Compare the actual result with the expected result
+        
+	try {
+	   //conversie la float pentru return value care vine din myRun function
+       float floatResult = Float.parseFloat(result);
+    
+         if (expectedResult == floatResult) {
+         System.out.println("Test succeeded.");
+         } else {
+          System.out.println("Test failed for expression \"" + expression + "\"");
+          System.out.println("Expected: " + expectedResult + ", but got: " + floatResult);
+       }
+    } catch (NumberFormatException e) {
+       System.out.println("Eroare: The result is not a valid number!"); 
+      }
+ }
+ 
 	public static void main(String[] args) {
 		String myExpression;
 		boolean active = true;
@@ -20,11 +43,14 @@ public class Start {
 			} else {
 				System.out.println(Calculator.myRun(myExpression));
 
-				
+            //apelare la functia mea de test - in corpul else
+            testRun(myExpression);
+         			
 			}
 			
 
 		}
+		
 
 	}
 

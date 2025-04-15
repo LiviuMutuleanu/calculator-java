@@ -47,9 +47,5 @@ public class CalculatorTest {
     public void testRun_InvalidExpression() {
         assertEquals("ERROR", Calculator.myRun("2&3"));
     }
-
-    @Test
-    public void Daniel_Test() {
-        assertEquals("41.0", Calculator.myRun("7*7-7"));
-    }
+    
 }

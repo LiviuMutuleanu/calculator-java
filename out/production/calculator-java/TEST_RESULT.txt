@@ -1,0 +1,24 @@
+estarea operațiilor aritmetice de bază:
+Intrare: „5+4”
+Scorul așteptat: „9”
+Testarea diferitelor operații:
+Intrare: „2*3-3/3”
+Rezultat așteptat: „5” 
+Operații de testare cu numere negative:
+Intrare: „-7+5”
+Rezultat așteptat: „-2”
+Testarea împărțirii la zero:
+Intrare: „8/0”
+Rezultatul așteptat: „Infinit”
+Testarea pentru introducerea expresiei nevalide:
+Intrare: „4+*5”
+Rezultat așteptat: „EROARE”
+Toate rezultatele așteptate sunt corecte.
+Metoda „ToString()” din clasa „Operations” ar trebui să afișeze „toString”,
+
+Gestionarea mai bună a tipurilor numerice:
+    Se folosește Float, dar pentru calcule matematice complexe, se pot utiliza Double pentru o precizie mai mare.
+
+Comentarii insuficiente:
+    Unele secțiuni sunt explicate cu comentarii, dar nu toate.
+    Adăugarea de comentarii ar ajuta la clarificarea logicii pentru alte persoane care citesc codul.

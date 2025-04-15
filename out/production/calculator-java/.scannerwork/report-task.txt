@@ -1,0 +1,6 @@
+projectKey=Lv5
+serverUrl=http://localhost:9000
+serverVersion=25.3.0.104237
+dashboardUrl=http://localhost:9000/dashboard?id=Lv5
+ceTaskId=eca66eac-7d3a-4eca-bac6-54297ab9a4a8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=eca66eac-7d3a-4eca-bac6-54297ab9a4a8
